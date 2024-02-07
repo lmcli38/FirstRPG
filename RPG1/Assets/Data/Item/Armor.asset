@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fc4fe9bd776c4fb08e2cb6744ed47, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  itemType: 1
+  ItemName: armor
+  Icon: {fileID: 5688385721555123385, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
+  dropChance: 25
+  equipmentType: 1
+  itemEffects: []
+  strength: 10
+  agility: 0
+  intelligence: 0
+  vitality: 0
+  maxhealth: 0
+  armor: 5
+  evasion: 0
+  magicResist: 0
+  damage: 0
+  critChance: 0
+  critPower: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightingDamage: 0
