@@ -43,6 +43,9 @@ public class Boss1_BattleState : enemyState
             moveDir = 1;
         else if (player.position.x < bossEnemy.transform.position.x)
             moveDir = -1;
+        if (bossEnemy.IsPlayerDetected() && bossEnemy.IsPlayerDetected().distance < bossEnemy.attackDistance - .1f)
+            return;
+
         bossEnemy.SetVelocity(bossEnemy.movespeed * moveDir, rb.velocity.y);
     }
     public override void Exit()

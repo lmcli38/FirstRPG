@@ -5,6 +5,16 @@ using UnityEngine.UIElements;
 
 public class Boss_1 : enemy
 {
+    public bool bossFightBegun;
+
+    [Header("Spell cast detail")]
+    [SerializeField] private GameObject spellPrefab;
+    public int amountOfSpells;
+    public float spellCooldown;
+    public float lastTimeCast;
+    [SerializeField] private float spellStateCooldown;
+    [SerializeField] private Vector2 spellOffset;
+
     [Header("TP detail")]
     [SerializeField] private BoxCollider2D arena;
     [SerializeField] private Vector2 surroundingCheckSize;
@@ -84,7 +94,7 @@ public class Boss_1 : enemy
 
         return false;
     }
-    /*public bool CanDoSpellCast()
+    public bool CanDoSpellCast()
     {
         if (Time.time >= lastTimeCast + spellStateCooldown)
         {
@@ -92,5 +102,21 @@ public class Boss_1 : enemy
         }
 
         return false;
-    }*/
+    }
+
+    public void CastSpell()
+    {
+        Player player = PlayerManager.instance.player;
+
+        float xOffset = 0;
+
+        if (player.rb.velocity.x != 0)
+            xOffset = player.facingDir * spellOffset.x;
+
+        Vector3 spellPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + spellOffset.y);
+
+        GameObject newSpell = Instantiate(spellPrefab, spellPosition, Quaternion.identity);
+        newSpell.GetComponent<boss1_spell_AC>().SetupSpell(stats);
+    }
+
 }

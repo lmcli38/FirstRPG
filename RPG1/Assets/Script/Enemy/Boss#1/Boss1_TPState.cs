@@ -19,7 +19,16 @@ public class Boss1_TPState : enemyState
     {
         base.Update();
         if (triggerCalled)
-            stateMachine.ChangeState(bossEnemy.BattleState);
+        {
+            if (bossEnemy.CanDoSpellCast())
+                stateMachine.ChangeState(bossEnemy.SpellCastState);
+            else
+                stateMachine.ChangeState(bossEnemy.BattleState);
+        }
+    }
+    public override void Exit()
+    {
+        base.Exit();
     }
 }
 
