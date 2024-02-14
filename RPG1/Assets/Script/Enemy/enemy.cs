@@ -33,8 +33,17 @@ public class enemy : Entity
 
     public virtual void AssignLastAnimName(string _animBoolName) => lastAnimBoolName = _animBoolName;
 
-    public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 55, whatIsPlayer);
-    
+    public virtual RaycastHit2D IsPlayerDetected()
+    {
+        RaycastHit2D playerDetected = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 55, whatIsPlayer);
+        /*
+        RaycastHit2D wallDetected = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 56, whatIsGround);
+
+        if(wallDetected)
+            return default(RaycastHit2D);
+        */ // 
+        return playerDetected;
+    }
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
     protected override void OnDrawGizmos()
     {

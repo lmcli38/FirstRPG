@@ -63,6 +63,7 @@ public class CharacterStats : MonoBehaviour
     public int currentHealth;
     public System.Action onHealthChanged;
     public bool isDead { get; private set; }
+    public bool isInvincible { get; private set; }
 
     protected virtual void Start()
     {
@@ -193,6 +194,9 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void TakeDamage(int _damage)
     {
+        if (isInvincible)
+            return;
+
         DecreaseHealth(_damage);
 
         GetComponent<Entity>().DamageEffect();
@@ -233,6 +237,8 @@ public class CharacterStats : MonoBehaviour
             Die();
 
     }
+
+    public void MakeInvinciblee(bool _invincible) => isInvincible = _invincible;
         #region Stat Calculations
         private bool CanAvoidAttack(CharacterStats _targetStats)
     {
@@ -299,4 +305,6 @@ public class CharacterStats : MonoBehaviour
             
         return null;
     }
+
+
 }

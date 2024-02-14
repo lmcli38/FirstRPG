@@ -13,6 +13,8 @@ public class ItemDrop : MonoBehaviour
 
     public virtual void GenerateDrop()
     {
+        if (possibileDrop.Length <= 0)
+            return;
         for(int i = 0; i < possibileDrop.Length; i++) 
         { 
             if(Random.Range(0,10) <= possibileDrop[i].dropChance)
@@ -21,10 +23,13 @@ public class ItemDrop : MonoBehaviour
 
         for (int i = 0; i< possibleItemDrop; i++)
         {
+            if (dropList.Count > 0)
+                return;
             ItemData randomItem = dropList[Random.Range(0,dropList.Count-1)];
 
             dropList.Remove(randomItem);
             DropItem(randomItem);
+
         }
     }
 

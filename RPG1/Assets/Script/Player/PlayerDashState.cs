@@ -12,6 +12,8 @@ public class PlayerDashState : PlayerState
     {
         base.Enter();
         stateTime = player.dashDuration;
+
+        player.stats.MakeInvinciblee(true);
     }
 
     public override void Exit()
@@ -19,6 +21,7 @@ public class PlayerDashState : PlayerState
         base.Exit();
 
         player.SetVelocity(0, rb.velocity.y);
+        player.stats.MakeInvinciblee(false);
     }
 
     public override void Update()

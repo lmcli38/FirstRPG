@@ -145,7 +145,7 @@ public class Entity : MonoBehaviour
 
     public virtual void Die()
     {
-        //Destroy(gameObject, 2f);
+        Destroy(gameObject, 2f);
     }
 
 }

@@ -17,7 +17,7 @@ public class Boss1_DeadState : enemyState
         bossEnemy.anim.speed = 0;
         bossEnemy.cd.enabled = false;
 
-        stateTimer = 0.13f;
+        stateTimer = 0.01f;
     }
 
 
