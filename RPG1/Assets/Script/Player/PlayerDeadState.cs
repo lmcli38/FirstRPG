@@ -11,6 +11,8 @@ public class PlayerDeadState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        GameObject.Find("Canvas").GetComponent<UI>().SwitchOnEndScreen();
     }
 
     public override void Exit()
@@ -23,7 +25,7 @@ public class PlayerDeadState : PlayerState
         base.Update();
 
         player.SetZeroVelocity();
-        if (GameManager.instance != null)
-            GameManager.instance.PauseGame(true);
+        /*if (GameManager.instance != null)
+            GameManager.instance.PauseGame(true);*/
     }
 }
