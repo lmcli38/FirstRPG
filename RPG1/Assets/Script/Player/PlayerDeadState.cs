@@ -25,7 +25,5 @@ public class PlayerDeadState : PlayerState
         base.Update();
 
         player.SetZeroVelocity();
-        /*if (GameManager.instance != null)
-            GameManager.instance.PauseGame(true);*/
     }
 }
