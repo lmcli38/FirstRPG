@@ -21,6 +21,8 @@ public class UI : MonoBehaviour
     public UI_ItemTool itemToolTip;
     public UI_StatToolTip statToolTip;
 
+    //[SerializeField]
+
     private void Awake()
     {
         fadeScreen.gameObject.SetActive(true);
@@ -29,6 +31,8 @@ public class UI : MonoBehaviour
     void Start()
     {
         SwitchTo(inGameUI);
+        itemToolTip.gameObject.SetActive(false);
+        statToolTip.gameObject.SetActive(false);
     }
 
 
@@ -57,13 +61,9 @@ public class UI : MonoBehaviour
         if (GameManager.instance != null)
         {
             if (_menu == inGameUI)
-            {
                 GameManager.instance.PauseGame(false); //unpaused the time during INGameUI
-            }
             else
-            {
                 GameManager.instance.PauseGame(true);//paused the time when the characterUI open 
-            }
         }
     }
 
@@ -103,4 +103,5 @@ public class UI : MonoBehaviour
         restartButton.SetActive(true);
     }
     public void RestartGameButton() => GameManager.instance.RestartGame();
+    
 }
