@@ -8,7 +8,7 @@ public class PlayerAttack0State : PlayerState
     int comboCounter;
 
     float lastTimeAttacked;
-    float comboWindow = 2;
+    float comboWindow = 0.5f;
     public PlayerAttack0State(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
     }
