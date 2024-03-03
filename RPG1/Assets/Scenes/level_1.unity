@@ -14562,7 +14562,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockbackDirection: {x: 8, y: 12}
+  knockbackPower: {x: 0, y: 0}
   knockbackDuration: 0.05
   whatIsPlayer:
     serializedVersion: 2
@@ -17745,7 +17745,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockbackDirection: {x: 0, y: 0}
+  knockbackPower: {x: 0, y: 0}
   knockbackDuration: 0
   attackMovement:
   - {x: 6, y: 1.5}
@@ -23993,7 +23993,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockbackDirection: {x: 0, y: 0}
+  knockbackPower: {x: 0, y: 0}
   knockbackDuration: 0
   whatIsPlayer:
     serializedVersion: 2
@@ -25651,7 +25651,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockbackDirection: {x: 8, y: 12}
+  knockbackPower: {x: 0, y: 0}
   knockbackDuration: 0.05
   whatIsPlayer:
     serializedVersion: 2
@@ -32538,7 +32538,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockbackDirection: {x: 8, y: 12}
+  knockbackPower: {x: 5, y: 10}
   knockbackDuration: 0.05
   whatIsPlayer:
     serializedVersion: 2

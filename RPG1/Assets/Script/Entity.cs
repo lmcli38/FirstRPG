@@ -16,10 +16,11 @@ public class Entity : MonoBehaviour
     [SerializeField] protected LayerMask whatIsGround;
 
     [Header("KnockBack info ")]
-    [SerializeField] protected Vector2 knockbackDirection;
+    [SerializeField] protected Vector2 knockbackPower;
     [SerializeField] protected float knockbackDuration;
     protected bool IsKnock;
 
+    public int knockbackDir { get; private set; }
     public int facingDir { get; private set; } = 1;
     protected bool facingRight = true;
 
@@ -70,12 +71,18 @@ public class Entity : MonoBehaviour
         fx.StartCoroutine("FlashFX");
         StartCoroutine("HitKnockback");
     }
-
+    public virtual void SetupKnockbackDir(Transform _damageDir)
+    {
+        if (_damageDir.position.x > transform.position.x)
+            knockbackDir = -1;
+        else if (_damageDir.position.x < transform.position.x)
+            knockbackDir = 1;
+    }
     protected virtual IEnumerator HitKnockback()
     {
         IsKnock = true;
 
-        rb.velocity = new Vector2(knockbackDirection.x * -facingDir, knockbackDirection.y);
+        rb.velocity = new Vector2(knockbackPower.x * knockbackDir, knockbackPower.y);
 
         yield return new WaitForSeconds(knockbackDuration);
 
