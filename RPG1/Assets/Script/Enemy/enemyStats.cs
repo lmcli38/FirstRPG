@@ -63,6 +63,6 @@ public class enemyStats : CharacterStats
         base.Die();
         enemy_00.Die();
 
-        //PlayerManager.instance.currency += soulsDropAmount.GetValue();
+        PlayerManager.instance.currency += soulsDropAmount.GetValue();
     }
 }

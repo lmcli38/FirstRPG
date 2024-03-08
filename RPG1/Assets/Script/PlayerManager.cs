@@ -20,6 +20,8 @@ public class PlayerManager : MonoBehaviour, ISaveManager
         }
     }
 
+    public int GetCurrency() { return currency; }
+
     public void LoadData(GameData _data)
     {
         this.currency = _data.currency;
