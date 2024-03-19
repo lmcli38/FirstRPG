@@ -1,3 +1,6 @@
+using UnityEngine;
+using UnityEngine.UI;
+
 public class enemy_0 : enemy
 {
     #region
@@ -6,6 +9,7 @@ public class enemy_0 : enemy
     public enemy_0_BattleState battleState { get; private set; }
     public enemy_0_attackState attackState { get; private set; }
     public enemy_0_DeadState deadState { get; private set; }
+    public enemy_0_StunState stunState { get; private set; }
 
 
     #endregion
@@ -18,6 +22,7 @@ public class enemy_0 : enemy
         battleState = new enemy_0_BattleState(this, stateMachine, "Move", this);
         attackState = new enemy_0_attackState(this, stateMachine, "Attack", this);
         deadState = new enemy_0_DeadState(this, stateMachine, "Idle", this);
+        stunState = new enemy_0_StunState(this, stateMachine, "Stun", this);
 
     }
 
@@ -30,6 +35,11 @@ public class enemy_0 : enemy
     protected override void Update()
     {
         base.Update();
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            stateMachine.ChangeState(stunState);
+        }
     }
 
     public override void Die()

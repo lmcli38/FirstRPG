@@ -8,7 +8,7 @@ public enum EquipmentType
     Flask
 }
 
-[CreateAssetMenu(fileName = "New Item data", menuName = "Data/Equipment")]
+[CreateAssetMenu(fileName = "New Item data", menuName = "Data/BuffEffect_Item")]
 
 
 
