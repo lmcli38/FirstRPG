@@ -42,6 +42,16 @@ public class enemy_0 : enemy
         }
     }
 
+    public override bool CanBeStunned()
+    {
+        if(base.CanBeStunned())
+        {
+            stateMachine.ChangeState(stunState);
+            return true;
+        }
+        return false;
+    }
+
     public override void Die()
     {
         base.Die();

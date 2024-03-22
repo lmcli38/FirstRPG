@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Sword_skill : Skill
 {
@@ -27,27 +24,20 @@ public class Sword_skill : Skill
     }
     protected override void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Mouse1))
+        if (Input.GetKeyUp(KeyCode.Mouse1))
         {
-            finalDir = new Vector2 (AimDirection().normalized.x * launchForce.x,0);
+            finalDir = new Vector2(AimDirection().normalized.x * launchForce.x, 0);
         }
-        /*if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            for(int i = 0; i < dots.Length; i++) 
-            {
-                dots[i].transform.position = DotsPosition(i * spaceBetweenDots);
-            }
-        }*/
 
     }
 
-    public void CreateSword()
+    public void CreateAirBlade()
     {
         GameObject newSword = Instantiate(swordPrefabs, player.transform.position, transform.rotation);
-        SwordSkill_AC newSwordScript = newSword.GetComponent<SwordSkill_AC>();
+        AirBlade_AC newAirBlade = newSword.GetComponent<AirBlade_AC>();
 
-        newSwordScript.SetUPSword(finalDir, swordGravity);
-
+        Debug.Log(finalDir);
+        newAirBlade.SetupAirBlade(finalDir, swordGravity);
         //DotsActive(false);
     }
 
@@ -57,7 +47,7 @@ public class Sword_skill : Skill
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePosition - playerPosition;
 
-        return  direction;
+        return direction;
     }
     /*public void DotsActive(bool _isActive)
     {
@@ -85,4 +75,6 @@ public class Sword_skill : Skill
         return position;
     }
     */
+
+
 }

@@ -7,6 +7,8 @@ public class enemy : Entity
     [Header("Stun Info")]
     public float stunDuration;
     public Vector2 stunDirection;
+    protected bool canBeStunned;
+    //[SerializeField] protected GameObject counterimage;
 
     [Header("Move Info ")]
     public float movespeed;
@@ -37,6 +39,26 @@ public class enemy : Entity
     }
 
     public virtual void AssignLastAnimName(string _animBoolName) => lastAnimBoolName = _animBoolName;
+
+    public virtual void OpenCounterAttackWindow()
+    {
+        canBeStunned = true;
+        //counterimage.SetActive(true);
+    }
+    public virtual void CloseCounterAttackWindow()
+    {
+        canBeStunned = false;
+        //counterimage.SetActive(false);
+    }
+    public virtual bool CanBeStunned()
+    {
+        if (canBeStunned)
+        {
+            CloseCounterAttackWindow();
+            return true;
+        }
+        return false;
+    }
 
     public virtual RaycastHit2D IsPlayerDetected()
     {
