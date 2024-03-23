@@ -35159,10 +35159,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirBlade
       objectReference: {fileID: 0}
-    - target: {fileID: 406840948393709637, guid: 64581e8534d73424da33ba63d8804b69, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64581e8534d73424da33ba63d8804b69, type: 3}
 --- !u!1001 &1994697466802478753

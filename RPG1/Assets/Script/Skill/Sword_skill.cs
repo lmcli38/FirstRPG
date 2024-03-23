@@ -26,7 +26,7 @@ public class Sword_skill : Skill
     {
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
-            finalDir = new Vector2(AimDirection().normalized.x * launchForce.x, 0);
+            finalDir = new Vector2(player.facingDir * launchForce.x, 0);
         }
 
     }
@@ -35,46 +35,20 @@ public class Sword_skill : Skill
     {
         GameObject newSword = Instantiate(swordPrefabs, player.transform.position, transform.rotation);
         AirBlade_AC newAirBlade = newSword.GetComponent<AirBlade_AC>();
+        
+        if (finalDir.x < 0)
+        {
+            // If facing left, flip the air blade
+            newSword.transform.localScale = new Vector3(-1f, 1f, 0f);
+        }
+        
 
-        Debug.Log(finalDir);
+        Debug.Log(player.facingDir);
         newAirBlade.SetupAirBlade(finalDir, swordGravity);
         //DotsActive(false);
     }
 
-    public Vector2 AimDirection()
-    {
-        Vector2 playerPosition = player.transform.position;
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mousePosition - playerPosition;
 
-        return direction;
-    }
-    /*public void DotsActive(bool _isActive)
-    {
-        for (int i = 0; i < dots.Length; i++) 
-        {
-            dots[i].SetActive(_isActive);
-        }
-    }
-   
-    private void GenereateDot()
-    {
-        dots = new GameObject[numberOfDots];
-        for (int i = 0; i <numberOfDots; i++)
-        {
-            dots[i] = Instantiate(dotPrefab, player.transform.position, Quaternion.identity, dotsParent);
-            dots[i].SetActive(false);
-        }
-    }
-
-    private Vector2 DotsPosition(float t)
-    {
-        Vector2 position = (Vector2)player.transform.position + new Vector2(
-            AimDirection().normalized.x * launchForce.x,
-            AimDirection().normalized.y * launchForce.y) * t + .5f * (Physics2D.gravity * swordGravity) * (t * t);
-        return position;
-    }
-    */
 
 
 }
