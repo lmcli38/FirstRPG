@@ -42,8 +42,7 @@ public class Sword_skill : Skill
         }
         
 
-        Debug.Log(player.facingDir);
-        newAirBlade.SetupAirBlade(finalDir, swordGravity);
+        newAirBlade.SetupAirBlade(finalDir, swordGravity,player);
     }
 
 

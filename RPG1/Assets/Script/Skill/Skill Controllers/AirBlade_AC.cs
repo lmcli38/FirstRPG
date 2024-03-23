@@ -9,7 +9,6 @@ public class AirBlade_AC : MonoBehaviour
 
     private void Awake()
     {
-        player = GetComponent<Player>();
         anim = GetComponent<Animator>();
         edgeCollider = GetComponent<EdgeCollider2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -18,22 +17,24 @@ public class AirBlade_AC : MonoBehaviour
     {
     }
 
-    public void SetupAirBlade(Vector2 _dir, float _gravityScale)
+    public void SetupAirBlade(Vector2 _dir, float _gravityScale,Player _player)
     {
+        player = _player;
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
     }
 
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<enemy>() != null) 
         {
-            EnemyStat enemyTarget = collision.GetComponent<EnemyStat>();
-
-            playerStats.DoDamage(enemyTarget);
+            enemy enemy0 = collision.GetComponent<enemy>();
+            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());
+            Destroy(gameObject);
         }
-    }*/
+    }
+
 
 
 }
