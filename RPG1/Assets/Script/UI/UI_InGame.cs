@@ -9,7 +9,10 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] PlayerStat playerStats;
     [SerializeField] Slider slider;
 
+
     [SerializeField] TextMeshProUGUI currentCurrency;
+
+
 
     private void Start()
     {

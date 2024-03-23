@@ -8,6 +8,9 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     private UI ui;
     public bool unlocked;
+    //public PlayerStat playerStats;
+    public int healthChangeAmount = 20;
+    public int damageChangeAmount = 10;
 
     [SerializeField] private string statName;
     [TextArea]
@@ -16,13 +19,16 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private UI_StatButton[] shouldBeUnLocked;
     [SerializeField] private UI_StatButton[] shouldBeLocked;
     [SerializeField] private Image skillImage;
+
     private void Start()
     {
         skillImage = GetComponent<Image>();
         ui = GetComponentInParent<UI>();
+        
         skillImage.color = Color.red;
 
         GetComponent<Button>().onClick.AddListener(() => Unlock());
+
     }
     public void Unlock()
     {
@@ -46,6 +52,24 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         unlocked = true;
         skillImage.color = Color.green;
+        //GetComponent<Button>().interactable = false;
+    }
+
+    public void ModifiyHealth()
+    {
+        PlayerStat playerStats = PlayerManager.instance.player.GetComponent<PlayerStat>();
+        if (unlocked)
+        {
+            playerStats.maxhealth.AddModifier(healthChangeAmount);
+            Debug.Log("max health moifiy:" + healthChangeAmount);
+        }  
+    }
+    
+    public void Modifiydamage()
+    {
+        PlayerStat playerStats = PlayerManager.instance.player.GetComponent<PlayerStat>();
+        if (unlocked)
+            playerStats.damage.AddModifier(damageChangeAmount);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

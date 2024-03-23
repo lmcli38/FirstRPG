@@ -290,10 +290,10 @@ RectTransform:
   m_Father: {fileID: 611381595}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1326.2, y: -67.2295}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63752531
 MonoBehaviour:
@@ -1062,11 +1062,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
-  - {fileID: 480223775}
-  - {fileID: 509953450}
+  - {fileID: 986061707}
+  - {fileID: 1808324617}
   shouldBeLocked: []
   skillImage: {fileID: 0}
 --- !u!114 &110211707
@@ -1112,7 +1114,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 110211708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 110211706}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: ModifiyHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &110211708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -2797,11 +2813,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
   - {fileID: 480223775}
   - {fileID: 509953450}
+  - {fileID: 711197282}
   shouldBeLocked: []
   skillImage: {fileID: 0}
 --- !u!114 &301875238
@@ -3634,10 +3653,10 @@ RectTransform:
   m_Father: {fileID: 611381595}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1016.2, y: -67.2295}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372104661
 MonoBehaviour:
@@ -13011,6 +13030,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: max health
   statDescription: max health + 10%
   shouldBeUnLocked: []
@@ -13059,7 +13080,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480223777}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 480223775}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: Modifiydamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480223777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13360,6 +13393,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -13937,6 +13972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -14750,6 +14787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -14801,7 +14840,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 696736400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 696736398}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: Modifiydamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &696736400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15291,12 +15342,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
   - {fileID: 480223775}
   - {fileID: 509953450}
-  - {fileID: 711197282}
   shouldBeLocked: []
   skillImage: {fileID: 0}
 --- !u!114 &711197283
@@ -15570,6 +15622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -15620,7 +15674,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 750719336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 750719334}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: Modifiydamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &750719336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16280,6 +16346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -17022,10 +17090,10 @@ RectTransform:
   m_Father: {fileID: 611381595}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 706.2, y: -67.2295}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958139596
 MonoBehaviour:
@@ -17479,11 +17547,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
-  shouldBeUnLocked:
-  - {fileID: 480223775}
-  - {fileID: 509953450}
+  shouldBeUnLocked: []
   shouldBeLocked: []
   skillImage: {fileID: 0}
 --- !u!114 &986061708
@@ -17529,7 +17597,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 986061709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 986061707}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: ModifiyHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &986061709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20911,7 +20991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1343828992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31236,10 +31316,10 @@ RectTransform:
   m_Father: {fileID: 611381595}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 396.2, y: -67.2295}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792398141
 MonoBehaviour:
@@ -31393,11 +31473,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
-  - {fileID: 480223775}
-  - {fileID: 509953450}
+  - {fileID: 986061707}
   shouldBeLocked: []
   skillImage: {fileID: 0}
 --- !u!114 &1808324618
@@ -31443,7 +31524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1808324619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1808324617}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: ModifiyHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1808324619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33113,6 +33206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 0
+  healthChangeAmount: 20
+  damageChangeAmount: 10
   statName: 
   statDescription: 
   shouldBeUnLocked:
@@ -33162,7 +33257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1997120549}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1997120547}
+        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
+        m_MethodName: Modifiydamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1997120549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35228,6 +35335,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 857283990}
+    - target: {fileID: 3962551144834358757, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
+      propertyPath: currency
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3962551144834358758, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
       propertyPath: m_Name
       value: Playermanager
