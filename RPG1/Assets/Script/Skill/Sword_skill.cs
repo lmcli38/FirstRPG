@@ -20,7 +20,6 @@ public class Sword_skill : Skill
     {
         base.Start();
 
-        //GenereateDot();
     }
     protected override void Update()
     {
@@ -45,7 +44,6 @@ public class Sword_skill : Skill
 
         Debug.Log(player.facingDir);
         newAirBlade.SetupAirBlade(finalDir, swordGravity);
-        //DotsActive(false);
     }
 
 
