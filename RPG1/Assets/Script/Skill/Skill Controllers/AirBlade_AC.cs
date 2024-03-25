@@ -15,6 +15,7 @@ public class AirBlade_AC : MonoBehaviour
     }
     void Start()
     {
+
     }
 
     public void SetupAirBlade(Vector2 _dir, float _gravityScale,Player _player)
@@ -22,6 +23,8 @@ public class AirBlade_AC : MonoBehaviour
         player = _player;
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
+
+        Destroy(gameObject, .8f);
     }
 
 

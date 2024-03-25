@@ -8,7 +8,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     private UI ui;
     public bool unlocked;
-    //public PlayerStat playerStats;
+    
     public int healthChangeAmount = 20;
     public int damageChangeAmount = 10;
 
@@ -34,14 +34,14 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         for (int i = 0; i < shouldBeUnLocked.Length; i++)
         {
-            if (shouldBeUnLocked[i].unlocked == false) 
+            if (shouldBeUnLocked[i].unlocked == false)
             {
                 Debug.Log("Cannot unlock skill");
                 return;
             }
         }
 
-        for (int i = 0;i < shouldBeLocked.Length; i++)
+        for (int i = 0; i < shouldBeLocked.Length; i++)
         {
             if (shouldBeLocked[i].unlocked == true)
             {
@@ -52,7 +52,13 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         unlocked = true;
         skillImage.color = Color.green;
-        //GetComponent<Button>().interactable = false;
+
+        if (statName == "Health")
+            ModifiyHealth();
+        else if (statName == "Damage")
+            Modifiydamage();
+
+        GetComponent<Button>().interactable = false;
     }
 
     public void ModifiyHealth()
@@ -61,7 +67,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (unlocked)
         {
             playerStats.maxhealth.AddModifier(healthChangeAmount);
-            Debug.Log("max health moifiy:" + healthChangeAmount);
+            Debug.Log("max health moifiy:" + healthChangeAmount);   
         }  
     }
     
