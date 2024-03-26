@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Next Level
   layers:
   - Default
   - TransparentFX
@@ -58,4 +59,7 @@ TagManager:
     locked: 0
   - name: FX
     uniqueID: 2956455343
+    locked: 0
+  - name: Next Level
+    uniqueID: 2153992873
     locked: 0
