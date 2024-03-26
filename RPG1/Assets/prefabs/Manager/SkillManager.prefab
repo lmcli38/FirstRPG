@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
-  swordPrefabs: {fileID: 3304421751625148095, guid: ceb0781318beee64ab0acba05f62a30f, type: 3}
-  launchForce: {x: 15, y: 20}
-  swordGravity: 4
+  swordPrefabs: {fileID: 406840948393709637, guid: 64581e8534d73424da33ba63d8804b69, type: 3}
+  launchForce: {x: 15, y: 0}
+  swordGravity: 0
   numberOfDots: 15
   spaceBetweenDots: 0.07
   dotPrefab: {fileID: 1415004161128701833, guid: a51f0a4cac45519419eff60a34f15352, type: 3}

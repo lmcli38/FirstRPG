@@ -40601,18 +40601,6 @@ PrefabInstance:
       propertyPath: dotsParent
       value: 
       objectReference: {fileID: 984406250}
-    - target: {fileID: 406100679131341200, guid: 78702101f897a8143bd15bb310945210, type: 3}
-      propertyPath: swordGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 406100679131341200, guid: 78702101f897a8143bd15bb310945210, type: 3}
-      propertyPath: swordPrefabs
-      value: 
-      objectReference: {fileID: 406840948393709637, guid: 64581e8534d73424da33ba63d8804b69, type: 3}
-    - target: {fileID: 406100679131341200, guid: 78702101f897a8143bd15bb310945210, type: 3}
-      propertyPath: launchForce.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 406100679131341204, guid: 78702101f897a8143bd15bb310945210, type: 3}
       propertyPath: m_Name
       value: SkillManager
@@ -40787,10 +40775,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 857283990}
-    - target: {fileID: 3962551144834358757, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
-      propertyPath: currency
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3962551144834358758, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
       propertyPath: m_Name
       value: Playermanager
