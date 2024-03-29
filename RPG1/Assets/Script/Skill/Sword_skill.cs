@@ -23,10 +23,6 @@ public class Sword_skill : Skill
     }
     protected override void Update()
     {
-        //Debug.Log("Player: " + player);
-        //Debug.Log("Final Dir: " + finalDir);
-
-
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             finalDir = new Vector2(player.facingDir * launchForce.x, 0);
@@ -44,7 +40,6 @@ public class Sword_skill : Skill
             // If facing left, flip the air blade
             newSword.transform.localScale = new Vector3(-1f, 1f, 0f);
         }
-        Debug.Log(finalDir);
 
         newAirBlade.SetupAirBlade(finalDir, swordGravity,player);
     }

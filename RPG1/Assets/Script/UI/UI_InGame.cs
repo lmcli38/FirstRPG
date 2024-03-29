@@ -9,9 +9,10 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] PlayerStat playerStats;
     [SerializeField] Slider slider;
 
-
+    [Header("Curreny INFO")]
     [SerializeField] TextMeshProUGUI currentCurrency;
-
+    [SerializeField] float currencyAmount;
+    [SerializeField] float increaseRate = 100; 
 
 
     private void Start()
@@ -22,8 +23,19 @@ public class UI_InGame : MonoBehaviour
 
     private void Update()
     {
-        currentCurrency.text = PlayerManager.instance.GetCurrency().ToString("#,#");
+        UpdateCurrencyUI();
     }
+
+    private void UpdateCurrencyUI()
+    {
+        if (currencyAmount < PlayerManager.instance.GetCurrency())
+            currencyAmount += Time.deltaTime * increaseRate;
+        else
+            currencyAmount = PlayerManager.instance.GetCurrency();
+
+        currentCurrency.text = ((int)currencyAmount).ToString();
+    }
+
     void UpdateHealthUI()
     {
         slider.maxValue = playerStats.GetMaxHealthValue();

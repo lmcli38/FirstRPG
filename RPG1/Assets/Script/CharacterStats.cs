@@ -46,6 +46,8 @@ public class CharacterStats : MonoBehaviour
     public Stat iceDamage;
     public Stat lightingDamage;
 
+    
+
     public bool isIgnited;
     public bool isChilled;
     public bool isShocked;
@@ -69,6 +71,8 @@ public class CharacterStats : MonoBehaviour
     {
         critPower.SetDefaultValue(150);
         currentHealth = GetMaxHealthValue();
+        
+
 
         fx = GetComponent<EntityFX>();
 

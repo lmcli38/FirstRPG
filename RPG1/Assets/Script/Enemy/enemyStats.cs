@@ -6,8 +6,7 @@ public class enemyStats : CharacterStats
 {
     private enemy enemy_00;
     private ItemDrop myDropSystem;
-    public Stat soulsDropAmount;
-
+   
     [Header("Level details")]
     [SerializeField] private int level = 1;
     
@@ -17,7 +16,6 @@ public class enemyStats : CharacterStats
 
     protected override void Start()
     {
-        soulsDropAmount.SetDefaultValue(10);
         ApplyLevelModifiers();
 
         base.Start();
@@ -41,7 +39,6 @@ public class enemyStats : CharacterStats
         Moify(iceDamage);
         Moify(lightingDamage);
 
-        Moify(soulsDropAmount);
     }
 
     private void Moify(Stat _stat)
@@ -62,7 +59,6 @@ public class enemyStats : CharacterStats
     {
         base.Die();
         enemy_00.Die();
-
-        PlayerManager.instance.currency += soulsDropAmount.GetValue();
+        
     }
 }

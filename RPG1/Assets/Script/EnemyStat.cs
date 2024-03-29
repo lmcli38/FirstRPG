@@ -7,13 +7,14 @@ public class EnemyStat : CharacterStats
 {
     enemy enemy_00;
     ItemDrop myDropSystem;
-
+    public Stat currnecyDropAmount;
     [SerializeField] int level;
 
     [Range(0f, 1f)]
     [SerializeField] float percantageModifier;
     protected override void Start()
     {
+        currnecyDropAmount.SetDefaultValue(100);
         ApplyLevelMoifier();
 
         base.Start();
@@ -35,6 +36,8 @@ public class EnemyStat : CharacterStats
         Moify(fireDamage);
         Moify(iceDamage);
         Moify(lightingDamage);
+
+        Moify(currnecyDropAmount);
     }
 
     private void Moify(Stat _stat)
@@ -58,6 +61,7 @@ public class EnemyStat : CharacterStats
         base.Die();
         enemy_00.Die();
 
+        PlayerManager.instance.currency += currnecyDropAmount.GetValue();
         myDropSystem.GenerateDrop();
         Destroy(gameObject, 2f);
     }

@@ -25646,6 +25646,9 @@ MonoBehaviour:
   isShocked: 0
   ailmentsDuration: 4
   currentHealth: 0
+  currnecyDropAmount:
+    baseValue: 0
+    modfiers: 
   level: 0
   percantageModifier: 0
 --- !u!114 &1506597431
@@ -25936,6 +25939,8 @@ MonoBehaviour:
   playerStats: {fileID: 857283995}
   slider: {fileID: 1491809400}
   currentCurrency: {fileID: 825399826}
+  currencyAmount: 0
+  increaseRate: 100
 --- !u!114 &1511055356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39689,8 +39694,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261489, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994697468359261489, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
+      propertyPath: percantageModifier
+      value: 0.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994697468359261489, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: maxhealth.baseValue
-      value: 100000
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
@@ -39749,6 +39762,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 857283990}
+    - target: {fileID: 3962551144834358757, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
+      propertyPath: currency
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3962551144834358758, guid: fac1b6d4ade02df4eb06a19921cebb72, type: 3}
       propertyPath: m_Name
       value: Playermanager
