@@ -19,12 +19,18 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private UI_StatButton[] shouldBeUnLocked;
     [SerializeField] private UI_StatButton[] shouldBeLocked;
     [SerializeField] private Image skillImage;
+    [SerializeField] int unlockCost = 100;
 
     private void Start()
     {
         skillImage = GetComponent<Image>();
         ui = GetComponentInParent<UI>();
-        
+
+        if (transform.parent.parent.name == "FirstRow")
+            unlockCost = 100;
+        else if (transform.parent.parent.name == "SecondRow")
+            unlockCost = 200;
+
         skillImage.color = Color.red;
 
         GetComponent<Button>().onClick.AddListener(() => Unlock());
@@ -32,6 +38,12 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void Unlock()
     {
+        if (PlayerManager.instance.currency < unlockCost)
+        {
+            Debug.Log("Not enough currency to unlock skill");
+            return;
+        }
+
         for (int i = 0; i < shouldBeUnLocked.Length; i++)
         {
             if (shouldBeUnLocked[i].unlocked == false)
@@ -52,6 +64,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         unlocked = true;
         skillImage.color = Color.green;
+        PlayerManager.instance.currency -= unlockCost;
 
         if (statName == "Health")
             ModifiyHealth();
