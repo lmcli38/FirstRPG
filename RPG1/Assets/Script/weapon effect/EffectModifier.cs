@@ -1,13 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Effect Modifier", menuName = "Effect Modifier")]
-public class EffectModifier : ScriptableObject
+public class EffectModifier : Skill
+{
+    [Header("ability Info")]
+    [SerializeField] GameObject abilityPrefab ;
+    [SerializeField] Vector2 launchForce;
+
+    Vector2 FinalDri;
+
+    public void Performability_1()
     {
-        public string modifierName;
-        public int modifierValue;
-        // Add any other properties for your effect modifier here
+        GameObject newSword = Instantiate(abilityPrefab, player.transform.position, transform.rotation);
+
+        Debug.Log("ability");
     }
+}
 
 

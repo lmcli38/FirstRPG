@@ -1,15 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public DistanceModifier distanceModifier;
+    public SIzeModifier sIzeModifier;
     public EffectModifier effectModifier;
-    public void UseWeapon()
+    public virtual void Attack()
     {
-        // Apply the effect modifier's effect here
-        // Example: Increase damage by the modifier value
-        int damageIncrease = effectModifier != null ? effectModifier.modifierValue : 0;
-        Debug.Log("Applying effect modifier: " + effectModifier.modifierName + " +" + damageIncrease + " damage");
+        //perform ability
+        effectModifier.Performability_1();
+        
+        //increase size
+        sIzeModifier.sizeMoifier();
+
+
+        //increase distance 
+        distanceModifier.distanceModifier();
     }
 }

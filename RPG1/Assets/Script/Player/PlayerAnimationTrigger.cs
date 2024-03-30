@@ -21,7 +21,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
             {
                 EnemyStat _target = hit.GetComponent<EnemyStat>();
                 string enemyName = hit.gameObject.name;
-                Debug.Log(enemyName);
+
                 if (hit.GetComponent<enemy>().CanBeStunned())
                 {
                     player.stats.DoDamage(_target);

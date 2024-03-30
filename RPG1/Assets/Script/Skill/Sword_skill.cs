@@ -9,12 +9,6 @@ public class Sword_skill : Skill
 
     Vector2 finalDir;
 
-    [Header("Aim dots")]
-    [SerializeField] int numberOfDots;
-    [SerializeField] float spaceBetweenDots;
-    [SerializeField] GameObject dotPrefab;
-    [SerializeField] Transform dotsParent;
-
     GameObject[] dots;
     protected override void Start()
     {
