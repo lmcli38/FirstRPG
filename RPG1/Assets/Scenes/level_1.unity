@@ -1579,6 +1579,7 @@ MonoBehaviour:
   - {fileID: 1808324617}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 300
 --- !u!114 &110211707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3146,6 +3147,7 @@ MonoBehaviour:
   - {fileID: 509953450}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &269651401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3826,6 +3828,7 @@ MonoBehaviour:
   - {fileID: 711197282}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &301875238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13827,10 +13830,13 @@ MonoBehaviour:
   healthChangeAmount: 20
   damageChangeAmount: 10
   statName: Damage
-  statDescription: max health + 10%
+  statDescription: '+ 10 Damage
+
+'
   shouldBeUnLocked: []
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &480223776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14183,6 +14189,7 @@ MonoBehaviour:
   - {fileID: 480223775}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &509953451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14843,6 +14850,7 @@ MonoBehaviour:
   - {fileID: 509953450}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &576333190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15859,13 +15867,14 @@ MonoBehaviour:
   healthChangeAmount: 20
   damageChangeAmount: 10
   statName: Damage
-  statDescription: 
+  statDescription: + 10 Damage
   shouldBeUnLocked:
   - {fileID: 480223775}
   - {fileID: 1997120547}
   - {fileID: 750719334}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 500
 --- !u!114 &696736399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16408,6 +16417,7 @@ MonoBehaviour:
   - {fileID: 509953450}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &711197283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16682,12 +16692,13 @@ MonoBehaviour:
   healthChangeAmount: 20
   damageChangeAmount: 10
   statName: Damage
-  statDescription: 
+  statDescription: + 10 Damage
   shouldBeUnLocked:
   - {fileID: 480223775}
   - {fileID: 1997120547}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 300
 --- !u!114 &750719335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17908,6 +17919,7 @@ MonoBehaviour:
   - {fileID: 509953450}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &823045790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19315,6 +19327,7 @@ MonoBehaviour:
   shouldBeUnLocked: []
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 100
 --- !u!114 &986061708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19358,19 +19371,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 986061709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 986061707}
-        m_TargetAssemblyTypeName: UI_StatButton, Assembly-CSharp
-        m_MethodName: ModifiyHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &986061709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21694,7 +21695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1163108035
 GameObject:
@@ -25612,7 +25613,7 @@ MonoBehaviour:
     baseValue: 0
     modfiers: 
   maxhealth:
-    baseValue: 1000
+    baseValue: 100000
     modfiers: 
   armor:
     baseValue: 0
@@ -35301,6 +35302,7 @@ MonoBehaviour:
   - {fileID: 986061707}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 200
 --- !u!114 &1808324618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37271,11 +37273,12 @@ MonoBehaviour:
   healthChangeAmount: 20
   damageChangeAmount: 10
   statName: Damage
-  statDescription: 
+  statDescription: + 10 Damage
   shouldBeUnLocked:
   - {fileID: 480223775}
   shouldBeLocked: []
   skillImage: {fileID: 0}
+  unlockCost: 200
 --- !u!114 &1997120548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39651,7 +39654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39659,7 +39662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.03
+      value: -2.0300293
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39671,15 +39674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261485, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39703,7 +39706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261489, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: maxhealth.baseValue
-      value: 10
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
@@ -39779,6 +39782,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4988044508560589297, guid: 9a39687244a0fed4b8b2e5db2c476300, type: 3}
+      propertyPath: maxhealth.baseValue
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 4988044508560589309, guid: 9a39687244a0fed4b8b2e5db2c476300, type: 3}
       propertyPath: m_RootOrder
       value: 9

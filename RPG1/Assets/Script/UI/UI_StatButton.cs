@@ -26,11 +26,6 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         skillImage = GetComponent<Image>();
         ui = GetComponentInParent<UI>();
 
-        if (transform.parent.parent.name == "FirstRow")
-            unlockCost = 100;
-        else if (transform.parent.parent.name == "SecondRow")
-            unlockCost = 200;
-
         skillImage.color = Color.red;
 
         GetComponent<Button>().onClick.AddListener(() => Unlock());
@@ -38,6 +33,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void Unlock()
     {
+        //check platyer have enough currency 
         if (PlayerManager.instance.currency < unlockCost)
         {
             Debug.Log("Not enough currency to unlock skill");

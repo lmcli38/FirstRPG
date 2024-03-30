@@ -20,12 +20,14 @@ public class PlayerAnimationTrigger : MonoBehaviour
             if (hit.GetComponent<enemy>() != null)
             {
                 EnemyStat _target = hit.GetComponent<EnemyStat>();
-
+                string enemyName = hit.gameObject.name;
+                Debug.Log(enemyName);
                 if (hit.GetComponent<enemy>().CanBeStunned())
                 {
                     player.stats.DoDamage(_target);
-
                 }
+                if(enemyName == "boss_1")
+                    player.stats.DoDamage(_target);
 
                 Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
 
