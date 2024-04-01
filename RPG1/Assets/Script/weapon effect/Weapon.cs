@@ -8,13 +8,13 @@ public class Weapon : MonoBehaviour
     public virtual void Attack()
     {
         //perform ability
-        effectModifier.Performability_1();
+        //effectModifier.Performability_1();
         
         //increase size
-        sIzeModifier.sizeMoifier();
+        //sIzeModifier.sizeMoifier();
 
 
         //increase distance 
-        distanceModifier.distanceModifier();
+        //distanceModifier.distanceModifier();
     }
 }

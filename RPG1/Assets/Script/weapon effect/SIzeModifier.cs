@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SIzeModifier : MonoBehaviour
 {
-    public void sizeMoifier()
+    
+    public float areaModifier = 2f;
+    public void sizeMoifier(EffectModifier _effectModifier)
     {
-        Debug.Log("increase size");
+        _effectModifier.SetArea(_effectModifier.GetArea() * areaModifier);
     }
 }

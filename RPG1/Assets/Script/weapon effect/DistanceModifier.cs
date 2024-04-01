@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class DistanceModifier : MonoBehaviour
 {
-    public void distanceModifier()
+    public float durationModifier = 1f;
+    public void distanceModifier(EffectModifier _effectModifier)
     {
-        Debug.Log("increase distance");
+        _effectModifier.SetDuration(_effectModifier.GetDuration()*durationModifier);
     }
 }

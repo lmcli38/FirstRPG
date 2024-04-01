@@ -1,18 +1,28 @@
 using UnityEngine;
 
-public class EffectModifier : Skill
+public class EffectModifier : MonoBehaviour
 {
-    [Header("ability Info")]
-    [SerializeField] GameObject abilityPrefab ;
-    [SerializeField] Vector2 launchForce;
+    protected float area = 1f;
+    protected float duration = 1f;
 
-    Vector2 FinalDri;
-
-    public void Performability_1()
+    public void SetArea(float newArea)
     {
-        GameObject newSword = Instantiate(abilityPrefab, player.transform.position, transform.rotation);
+        area = newArea;
+    }
 
-        Debug.Log("ability");
+    public float GetArea()
+    {
+        return area;
+    }
+
+    public void SetDuration(float newDuration)
+    {
+        duration = newDuration;
+    }
+
+    public float GetDuration()
+    {
+        return duration;
     }
 }
 
