@@ -18,6 +18,8 @@ public class enemy_0_IdleState : enemy_0_groundState
     public override void Exit()
     {
         base.Exit();
+
+        AudioManager.instance.PlaySFX(14, enemy_00.transform);
     }
 
     public override void Update()

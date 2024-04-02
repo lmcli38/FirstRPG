@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3fc4fe9bd776c4fb08e2cb6744ed47, type: 3}
   m_Name: AirBlade
   m_EditorClassIdentifier: 
-  itemType: 0
-  ItemName: 
+  itemType: 1
+  ItemName: AirBlade
   Icon: {fileID: 7685470968617421020, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
   ItemID: 06d3a13bc7250664eaa12c8de6fc9fc3
   dropChance: 0

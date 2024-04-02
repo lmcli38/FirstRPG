@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
+    [SerializeField] float sfxMinmumDistance;
     [SerializeField] AudioSource[] sfx;
     [SerializeField] AudioSource[] bgm;
 
@@ -34,8 +35,14 @@ public class AudioManager : MonoBehaviour
                 PlayBGM(bgmIndex);
         }
     }
-    public void PlaySFX(int _sfxIndex)
+    public void PlaySFX(int _sfxIndex, Transform _source)
     {
+        if (sfx[_sfxIndex].isPlaying)
+            return;
+
+        if(_source != null && Vector2.Distance(PlayerManager.instance.player.transform.position,_source.position)>sfxMinmumDistance)
+            return;
+
         if(_sfxIndex < sfx.Length)
             sfx[_sfxIndex].Play();
     }
