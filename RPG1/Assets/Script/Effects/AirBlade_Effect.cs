@@ -6,9 +6,15 @@ public class AirBlade_Effect : ItemEffect
 {
     [SerializeField] GameObject AirBladePrefab;
     float moveSpeed = 5f;
-
-    public override void ExecuteEffect(Transform playerTransform) 
+    int attackcounter = 0;
+    int attackThreshold = 3;
+    public override void ExecuteEffect(Transform playerTransform)
     {
+        attackcounter++;
+
+        if (attackcounter % attackThreshold == 0) 
+        { 
+
         // Calculate the position in front of the player
         Vector2 spawnPosition = playerTransform.position + playerTransform.right * 1.5f; // Adjust the distance as needed
 
@@ -38,7 +44,7 @@ public class AirBlade_Effect : ItemEffect
 
 
         Destroy(newAirBlade, 3f);
-
+        }
     }
 
 
