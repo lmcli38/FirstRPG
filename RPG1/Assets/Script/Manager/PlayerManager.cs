@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour, ISaveManager
 {
     public static PlayerManager instance;
     public Player player;
+    public PlayerStat stat;
 
     public int currency;
     private void Awake()

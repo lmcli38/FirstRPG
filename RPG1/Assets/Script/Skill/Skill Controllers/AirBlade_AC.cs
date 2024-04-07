@@ -32,16 +32,18 @@ public class AirBlade_AC : MonoBehaviour
     {
         if(collision.GetComponent<enemy>() != null) 
         {
-            
-            enemy enemy0 = collision.GetComponent<enemy>();
-            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());
-
-            Destroy(gameObject);
             /*
+            enemy enemy0 = collision.GetComponent<enemy>();
+            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());*/
+
+            
             PlayerStat playerStat = PlayerManager.instance.player.GetComponent<PlayerStat>();
             EnemyStat enemyTarget = collision.GetComponent<EnemyStat>();
 
-            playerStat.DoMagicalDamage(enemyTarget);*/
+            playerStat.DoMagicalDamage(enemyTarget);
+
+            Destroy(gameObject);
+
         }
     }
 

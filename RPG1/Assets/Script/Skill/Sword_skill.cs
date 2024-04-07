@@ -9,7 +9,6 @@ public class Sword_skill : Skill
 
     Vector2 finalDir;
 
-    GameObject[] dots;
     protected override void Start()
     {
         base.Start();
@@ -37,8 +36,4 @@ public class Sword_skill : Skill
 
         newAirBlade.SetupAirBlade(finalDir, swordGravity,player);
     }
-
-
-
-
 }
