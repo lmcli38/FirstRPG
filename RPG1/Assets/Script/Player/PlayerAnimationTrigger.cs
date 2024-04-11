@@ -44,4 +44,5 @@ public class PlayerAnimationTrigger : MonoBehaviour
         SkillManager.instance.sword.CreateAirBlade();
 
     }
+
 }

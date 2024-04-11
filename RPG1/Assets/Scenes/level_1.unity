@@ -21678,6 +21678,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1197c7b3259e54408cd73154938673c, type: 2}
   - {fileID: 11400000, guid: 78eb4100e8b2dd6408ba9dc113192068, type: 2}
   - {fileID: 11400000, guid: 06d3a13bc7250664eaa12c8de6fc9fc3, type: 2}
+  - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
+  - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
+  - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
   equipment: []
   stash: []
   inventoryItems: []
@@ -39891,6 +39894,10 @@ PrefabInstance:
     - target: {fileID: 4988044508560589297, guid: 9a39687244a0fed4b8b2e5db2c476300, type: 3}
       propertyPath: maxhealth.baseValue
       value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988044508560589297, guid: 9a39687244a0fed4b8b2e5db2c476300, type: 3}
+      propertyPath: fireDamage.baseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4988044508560589309, guid: 9a39687244a0fed4b8b2e5db2c476300, type: 3}
       propertyPath: m_RootOrder

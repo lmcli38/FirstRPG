@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6786525669512672951}
   m_Layer: 0
   m_Name: AirBlade
-  m_TagString: Untagged
+  m_TagString: AirBlade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
