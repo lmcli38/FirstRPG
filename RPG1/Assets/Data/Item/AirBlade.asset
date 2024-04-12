@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   ItemName: AirBlade
-  Icon: {fileID: 7685470968617421020, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
+  Icon: {fileID: 21300000, guid: 541333b61f307b242b5ef739a17008cd, type: 3}
   ItemID: 06d3a13bc7250664eaa12c8de6fc9fc3
   dropChance: 0
   equipmentType: 0

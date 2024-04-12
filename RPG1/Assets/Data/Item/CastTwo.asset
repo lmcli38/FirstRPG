@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   ItemName: CastTwo
-  Icon: {fileID: 6948773886327953995, guid: be55291aae08d434db3da3b59db3ab4a, type: 3}
+  Icon: {fileID: 21300000, guid: ca142d782210f24488e887036d4a517e, type: 3}
   ItemID: af7b6acdbcddc1b4e9ce01344ff29b36
   dropChance: 0
   equipmentType: 1

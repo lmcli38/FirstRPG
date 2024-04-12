@@ -52,7 +52,7 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
             return;
         }
 
-        if(item.itemData.itemType == ItemType.Equipment) 
+        if(item.itemData.itemType == ItemType.Ability) 
         {
             Inventory.instance.EquipItem(item.itemData);
         }

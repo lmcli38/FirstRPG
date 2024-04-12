@@ -5,11 +5,11 @@ using UnityEngine;
 public enum ItemType
 { 
     Material,
-    Equipment
+    Ability
 }
 
 
-[CreateAssetMenu(fileName = "New Item data", menuName = "Data/Item")]
+
 public class ItemData : ScriptableObject
 {
     public ItemType itemType;

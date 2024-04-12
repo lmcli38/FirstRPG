@@ -9,7 +9,7 @@ public class UI_EquipmentSlot : UI_ItemSlot
 
     private  void OnValidate()
     {
-        gameObject.name = "Equipment slot - " + SlotType.ToString();
+        gameObject.name = "Ability slot - " + SlotType.ToString();
     }
 
     public override void OnPointerDown(PointerEventData eventData)

@@ -2,10 +2,9 @@ using UnityEngine;
 
 public enum EquipmentType
 {
-    Weapon,
-    Armor,
-    Amulet,
-    Flask
+    Effect,
+    Modifier,
+
 }
 
 [CreateAssetMenu(fileName = "New Item data", menuName = "Data/BuffEffect_Item")]

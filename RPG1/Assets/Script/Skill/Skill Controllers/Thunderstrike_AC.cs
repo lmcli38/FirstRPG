@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Thunderstrike_AC : EffectModifier
+public class Thunderstrike_AC : MonoBehaviour
 {
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {

@@ -29,7 +29,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
                 if(enemyName == "boss_1")
                     player.stats.DoDamage(_target);
 
-                Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
+                Inventory.instance.GetEquipment(EquipmentType.Effect)?.Effect(_target.transform);
 
                 /*ItemData_Equipment weaponData = Inventory.instance.GetEquipment(EquipmentType.Weapon);
                 if(weaponData != null)
