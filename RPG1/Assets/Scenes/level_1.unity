@@ -21986,6 +21986,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
   - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
   - {fileID: 11400000, guid: af7b6acdbcddc1b4e9ce01344ff29b36, type: 2}
+  - {fileID: 11400000, guid: fa35f843e180a864fbbc4971296d1d44, type: 2}
   equipment: []
   stash: []
   inventoryItems: []
@@ -40073,7 +40074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261488, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: possibileDrop.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261488, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: possibileDrop.Array.data[1]
@@ -40106,7 +40107,7 @@ PrefabInstance:
     - target: {fileID: 1994697468359261488, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: possibileDrop.Array.data[8]
       value: 
-      objectReference: {fileID: 11400000, guid: 1395a308ed2033a41ad1d448ee9e61aa, type: 2}
+      objectReference: {fileID: 11400000, guid: 06d3a13bc7250664eaa12c8de6fc9fc3, type: 2}
     - target: {fileID: 1994697468359261488, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: possibileDrop.Array.data[9]
       value: 
@@ -40121,7 +40122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994697468359261489, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}
       propertyPath: maxhealth.baseValue
-      value: 1000000
+      value: 10000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27786434d79c94641819ab8e6b5fb1f1, type: 3}

@@ -11,7 +11,7 @@ public class CastTwelve : ItemEffect
         Debug.Log(airBladeEffect);
         if (airBladeEffect != null)
         {
-            airBladeEffect.additionalCasts = additionalCasts;
+            //airBladeEffect.additionalCasts = additionalCasts;
         }
         else
         {

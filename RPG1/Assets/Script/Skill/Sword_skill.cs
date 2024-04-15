@@ -34,6 +34,6 @@ public class Sword_skill : Skill
             newSword.transform.localScale = new Vector3(-1f, 1f, 0f);
         }
 
-        newAirBlade.SetupAirBlade(finalDir, swordGravity,player);
+        //newAirBlade.SetupAirBlade(finalDir, swordGravity,player);
     }
 }

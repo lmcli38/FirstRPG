@@ -2,6 +2,29 @@ using UnityEngine;
 
 public class AirBlade_AC : MonoBehaviour
 {
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        //base.OnTriggerEnter2D(collision);
+        if (collision.GetComponent<enemy>() != null)
+        {
+            PlayerStat playerStat = PlayerManager.instance.player.GetComponent<PlayerStat>();
+            EnemyStat enemyTarget = collision.GetComponent<EnemyStat>();
+            playerStat.DoMagicalDamage(enemyTarget);
+
+            /*
+            enemy enemy0 = collision.GetComponent<enemy>();
+            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());*/
+        }
+    }
+
+}
+
+
+
+
+/*
+public class AirBlade_AC : MonoBehaviour
+{
     private Player player;
     private Animator anim;
     private EdgeCollider2D edgeCollider;
@@ -32,9 +55,9 @@ public class AirBlade_AC : MonoBehaviour
     {
         if(collision.GetComponent<enemy>() != null) 
         {
-            /*
+            
             enemy enemy0 = collision.GetComponent<enemy>();
-            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());*/
+            player.stats.DoDamage(enemy0.GetComponent<CharacterStats>());
 
             
             PlayerStat playerStat = PlayerManager.instance.player.GetComponent<PlayerStat>();
@@ -50,3 +73,4 @@ public class AirBlade_AC : MonoBehaviour
 
 
 }
+*/

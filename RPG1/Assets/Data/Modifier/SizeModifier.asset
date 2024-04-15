@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06fcea55142768d4bb35d48a8f44e6ea, type: 3}
-  m_Name: iron
+  m_Script: {fileID: 11500000, guid: 959a00adf805f944e9e589eae50f8558, type: 3}
+  m_Name: SizeModifier
   m_EditorClassIdentifier: 
-  itemType: 0
-  ItemName: iron
-  Icon: {fileID: -3317760771765856235, guid: 9c7355b0cb8a5024bba44738f70d9e74, type: 3}
+  scaleMultiplier: {x: 1.5, y: 1.5, z: 1.5}

@@ -38,11 +38,11 @@ public class PlayerAnimationTrigger : MonoBehaviour
         }
     }
 
-
+    
     void ThrowSword()
     {
         SkillManager.instance.sword.CreateAirBlade();
 
     }
-
+    
 }

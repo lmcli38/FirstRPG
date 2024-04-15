@@ -18,6 +18,8 @@ public class ItemData_Equipment : ItemData
     [Header("Unique effect")]
     public float itemCooldown;
     public ItemEffect[] itemEffects;
+    public Modification[] modifications;
+
     [TextArea]
     public string itemEffectDescription;
 
