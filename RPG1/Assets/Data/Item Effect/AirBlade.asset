@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AirBladePrefab: {fileID: 406840948393709637, guid: 64581e8534d73424da33ba63d8804b69, type: 3}
   xVelocity: 15
-  modification: {fileID: 11400000, guid: fda136bd1946b6244b79f1b5a447ad09, type: 2}
+  modifiers: []

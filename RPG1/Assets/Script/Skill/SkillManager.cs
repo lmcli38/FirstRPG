@@ -23,7 +23,7 @@ public class SkillManager : MonoBehaviour
 
     private void Start()
     {
-         dash = GetComponent<Dash_Skill>();
+        dash = GetComponent<Dash_Skill>();
         sword = GetComponent<Sword_skill>();
         fireball = GetComponent<FireBall_skill>();
     }

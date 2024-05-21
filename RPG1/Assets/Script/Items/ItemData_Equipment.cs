@@ -48,7 +48,7 @@ public class ItemData_Equipment : ItemData
 
 
     int minDescriptionLength;
-
+    Player player;
     public void Effect(Transform _enemyPosition)
     {
         foreach (var item in itemEffects) 
@@ -77,8 +77,18 @@ public class ItemData_Equipment : ItemData
         playerStats.fireDamage.AddModifier(fireDamage);
         playerStats.iceDamage.AddModifier(iceDamage);
         playerStats.lightingDamage.AddModifier(lightingDamage);
-    }
 
+
+    }
+    /*
+    public void ApplyModifications(GameObject gameObject)
+    {
+        foreach (var mod in modifications)
+        {
+            if(mod != null)
+                mod.ApplyModification(gameObject);
+        }
+    }*/
     public void RemoveModifier()
     {
         PlayerStat playerStats = PlayerManager.instance.player.GetComponent<PlayerStat>();
