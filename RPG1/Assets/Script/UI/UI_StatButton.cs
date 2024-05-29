@@ -26,7 +26,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         skillImage = GetComponent<Image>();
         ui = GetComponentInParent<UI>();
 
-        skillImage.color = Color.red;
+        //skillImage.color = Color.red;
 
         GetComponent<Button>().onClick.AddListener(() => Unlock());
 
@@ -59,7 +59,7 @@ public class UI_StatButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
 
         unlocked = true;
-        skillImage.color = Color.green;
+        //skillImage.color = Color.green;
         PlayerManager.instance.currency -= unlockCost;
 
         if (statName == "Health")

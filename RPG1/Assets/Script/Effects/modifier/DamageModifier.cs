@@ -3,6 +3,13 @@ using UnityEngine;
 public class DamageModifier : Modification
 {
     [SerializeField] int AdditionDamage;
+    public float damageMultiplier = 1.5f;
+
+    public override void ApplyModifier(Skill skill)
+    {
+
+    }
+
     public override void ApplyModification(GameObject gameObject)
     {
         // Get the script responsible for dealing damage

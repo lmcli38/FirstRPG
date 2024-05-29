@@ -8,10 +8,13 @@ public class Skill : MonoBehaviour
     protected float cooldownTimer;
 
     protected Player player;
-
+    public List<Modification> modifiers = new List<Modification>();
     protected virtual void Start()
     {
         player = PlayerManager.instance.player;
+
+        //foreach (var modifier in modifiers)
+            //modifier.ApplyModifier(this);
     }
     protected virtual void Update()
     {
