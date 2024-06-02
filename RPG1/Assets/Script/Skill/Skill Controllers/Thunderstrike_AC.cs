@@ -8,7 +8,7 @@ public class Thunderstrike_AC : MonoBehaviour
         {
             PlayerStat playerStat = PlayerManager.instance.player.GetComponent<PlayerStat>();
             EnemyStat enemyTarget = collision.GetComponent<EnemyStat>();
-            playerStat.DoMagicalDamage(enemyTarget);
+            playerStat.DoMagicalDamage(enemyTarget, 1.5f);
 
             /*
             enemy enemy0 = collision.GetComponent<enemy>();

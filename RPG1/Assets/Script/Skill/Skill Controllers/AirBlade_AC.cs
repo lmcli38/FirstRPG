@@ -1,7 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AirBlade_AC : MonoBehaviour
 {
+    public float damageMultiplier = 1.0f;
+    public List<Modification> modifiers = new List<Modification>();
+
+    private void Start()
+    {
+        foreach (var modifier in modifiers)
+        {
+            modifier.ApplyModifier(this);
+        }
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         //base.OnTriggerEnter2D(collision);
@@ -9,7 +21,7 @@ public class AirBlade_AC : MonoBehaviour
         {
             PlayerStat playerStat = PlayerManager.instance.player.GetComponent<PlayerStat>();
             EnemyStat enemyTarget = collision.GetComponent<EnemyStat>();
-            playerStat.DoMagicalDamage(enemyTarget);
+            playerStat.DoMagicalDamage(enemyTarget, damageMultiplier);
 
             /*
             enemy enemy0 = collision.GetComponent<enemy>();

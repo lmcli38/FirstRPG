@@ -7,7 +7,7 @@ public class SpeedModifier : Modification
     [SerializeField] float speedMultiplier = 15;
 
 
-    public override void ApplyModifier(Skill skill)
+    public override void ApplyModifier(AirBlade_AC airBlade)
     {
 
     }

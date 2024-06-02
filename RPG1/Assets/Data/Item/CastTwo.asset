@@ -21,6 +21,8 @@ MonoBehaviour:
   itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: 0a56dc192c50d6048a30c8a819884533, type: 2}
+  modifications:
+  - {fileID: 11400000, guid: 3e336e20966f0cc40978607746f73642, type: 2}
   itemEffectDescription: 
   strength: 0
   agility: 0

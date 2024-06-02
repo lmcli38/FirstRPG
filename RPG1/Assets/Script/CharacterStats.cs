@@ -125,25 +125,25 @@ public class CharacterStats : MonoBehaviour
         }
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
         _targetStats.TakeDamage(totalDamage);
-        DoMagicalDamage(_targetStats);
+        //DoMagicalDamage(_targetStats);
     }
 
 
     #region Magical damage and ailments
-    public virtual void DoMagicalDamage(CharacterStats _targetStats)
+    public virtual void DoMagicalDamage(CharacterStats _targetStats , float damageMultiplier)
     {
-        int _fireDamage = fireDamage.GetValue();
-        int _iceDamage = iceDamage.GetValue();
-        int _lightingDamage = lightingDamage.GetValue();
+        int _fireDamage = Mathf.RoundToInt(this.fireDamage.GetValue() * damageMultiplier);
+        int _iceDamage = Mathf.RoundToInt(this.iceDamage.GetValue() * damageMultiplier);
+        int _lightningDamage = Mathf.RoundToInt(this.lightingDamage.GetValue() * damageMultiplier);
 
-        int totalMagicalDamage = _fireDamage + _iceDamage + _lightingDamage + intelligence.GetValue();
+        int totalMagicalDamage = _fireDamage + _iceDamage + _lightningDamage;
 
         totalMagicalDamage = CheckMagicResist(_targetStats, totalMagicalDamage);
         _targetStats.TakeDamage(totalMagicalDamage);
 
-        bool canApplyIgnite = _fireDamage > _iceDamage && _fireDamage > _lightingDamage;
-        bool canApplyChill = _iceDamage > _fireDamage && _iceDamage > _lightingDamage;
-        bool canApplyShock = _lightingDamage > _fireDamage && _lightingDamage > _iceDamage;
+        bool canApplyIgnite = _fireDamage > _iceDamage && _fireDamage > _lightningDamage;
+        bool canApplyChill = _iceDamage > _fireDamage && _iceDamage > _lightningDamage;
+        bool canApplyShock = _lightningDamage > _fireDamage && _lightningDamage > _iceDamage;
 
         if (canApplyIgnite)
             _targetStats.SetupIgniteDamage(Mathf.RoundToInt(_fireDamage * .2f));

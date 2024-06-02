@@ -3,11 +3,11 @@ using UnityEngine;
 public class DamageModifier : Modification
 {
     [SerializeField] int AdditionDamage;
-    public float damageMultiplier = 1.5f;
+    public float damageMultiplier = 2f;
 
-    public override void ApplyModifier(Skill skill)
+    public override void ApplyModifier(AirBlade_AC airBlade)
     {
-
+        airBlade.damageMultiplier *= damageMultiplier;
     }
 
     public override void ApplyModification(GameObject gameObject)
